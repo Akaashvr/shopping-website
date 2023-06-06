@@ -1,0 +1,79 @@
+
+.navbar {
+  margin: 0 auto;
+    padding: 0;
+    width: 100%;
+    height: 2.7em;
+}
+.navbar2 {
+  margin: 0 auto;
+    padding: 6px;
+    width: 100%;
+    height: 4.75em;
+}
+
+.nav-link {
+  text-align: center;
+  font-family: "Bauhaus 93";
+  font-size: 25px;
+}
+.navbar-brand {
+  font-family: "Licorice",cursive;
+  font-size: 45px;
+  font-weight: bold;
+}
+.colored-section {
+  background-color: #218AC4;
+}
+
+.yeah{
+  background-color: orange;
+}
+
+.yeah2{
+  font-family: "bebas neue regular";
+  font-size: 27px;
+  position: relative;
+  left: 20px;
+}
+.title{
+  position: relative;
+  left: 55rem;
+  bottom: 30rem;
+}
+.title-ref{
+  font-family: "bebas neue regular";
+  font-size: 20px;
+}
+
+.price{
+  font-family: "bebas neue regular";
+  position: relative;
+  bottom:35rem;
+  left:60px;
+}
+
+.price-btn {
+  max-width: 350px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+  position: relative;
+  bottom:3.7rem;
+  right:275px;
+}
+.price button {
+  border-radius: 40px;
+  padding: 12px;
+  background-color: #218AC4;
+  font-family: "bebas neue regular";
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+.price button:hover {
+  transition-duration: 0.4s;
+  background-color: orange;
+}

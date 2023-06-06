@@ -1,0 +1,129 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Men's Fashion Page{% endblock %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'styles/mencss.css' %}">
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark justify-content-center">
+  <!-- Links -->
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a class="nav-link">Limited Stocks remaining. Shop Now --></a>
+    </li>
+</nav>
+
+<section class="colored-section" id="title">
+<nav class="navbar2 navbar-expand-sm navbar-dark">
+  <!-- Links -->
+  <ul class="navbar-nav2">
+      <a class="navbar-brand" href="{% url 'main' %}">
+         <img src="{% static 'images\logo.gif' %}" width="70" height="70" alt="">
+      Shoppee
+    </a>
+    <a class = "nav-cat" href="{% url 'electronics' %}"> ELECTRONICS </a>&emsp;&emsp;
+    <a class = "nav-cat" href="{% url 'Wfashion' %}"> WOMENS </a>&emsp;&emsp;
+    <a class = "nav-cat" href=""{% url 'beauty' %}"> BEAUTY </a>
+    </ul>
+  </section>
+</nav>
+
+<section class="white-section" id="features">
+
+  <div class="container-fluid">
+        <div class="row">
+            <h3 class="feature-title">&emsp;Mens</h3>
+            <p style="font-family:MS Reference Sans Serif;">
+              &emsp;&emsp;&ensp;<a href="{% url 'main' %}"><button class="button button1">&ensp;Home</button></a> > Mens</p>
+      </a>
+    </section>
+</div>
+
+<br>
+<div class="header" style="background-color:orange; font-family:Bebas Neue Regular;">
+  <h2>Showing 9 results</h2>
+</div>
+
+<div class="row">
+  <div class="card" style="background-color:white;" >
+    <img src="{% static 'images\7.jpg' %}" alt="HP Laptop" style="width:100%">
+    <h2>Prowl Men's Printed T-Shirt</h2>
+    <p class="price">Rs 2,199</p>
+    <p>Slim Fit - M - (Grey)</p>
+    <a href="{% url 'Mfashion' %}">
+    <p><button>View</button></p>
+  </a>
+  </div>
+  <div class="card" style="background-color:white;">
+    <img src="{% static 'images\8.jpg' %}" alt="HP Laptop" style="width:100%">
+    <h2>Proline Men's Printed Hoodie </h2>
+    <p class="price">Rs 1,499</p>
+    <p>Slim Fit - M - (Green-Black)</p>
+    <a href="{% url 'Mfashion' %}">
+    <p><button>View</button></p>
+  </a></div>
+  <div class="card" style="background-color:white;">
+    <img src="{% static 'images\13.jpg' %}" alt="HP Laptop" style="width:100%">
+    <h2>Leotude Cotton Blend Solids  </h2>
+    <p class="price">Rs 1,699</p>
+    <p>T-shirt -M (Black)</p>
+    <a href="{% url 'Mfashion' %}">
+    <p><button>View</button></p>
+  </a></div>
+  <div class="card" style="background-color:white;">
+    <img src="{% static 'images\14.jpg' %}" alt="HP Laptop" style="width:100%">
+    <h2>AUSK 100% Cotton Block  </h2>
+    <p class="price">Rs 1,499</p>
+    <p> Multi Color T-Shirt - M</p>
+    <a href="{% url 'Mfashion' %}">
+    <p><button>View</button></p>
+  </a></div>
+</div>
+<br><br>
+
+<div class="row">
+  <div class="card" style="background-color:white;" >
+   <img src="{% static 'images\15.jpg' %}" alt="HP Laptop" style="width:100%">
+    <h2>Gritstones Cotton Blend  </h2>
+    <p class="price">Rs 1,799</p>
+    <p>Shirt -M (Pink)</p>
+    <a href="{% url 'Mfashion' %}">
+    <p><button>View</button></p>
+  </a></div>
+  <div class="card" style="background-color:white;">
+   <img src="{% static 'images\16.jpg' %}" alt="HP Laptop" style="width:100%">
+    <h2>JUMP-CUTS 100% Cotton Block Printed  </h2>
+    <p class="price">Rs 1,249</p>
+    <p>T-shirt -M (Black)</p>
+    <a href="{% url 'Mfashion' %}">
+    <p><button>View</button></p>
+  </a></div>
+  <div class="card" style="background-color:white;">
+    <img src="{% static 'images\17.jpg' %}" alt="HP Laptop" style="width:100%">
+    <h2>BURNOUT SPORT Lycra Trackpants   </h2>
+    <p class="price">Rs 1,499</p>
+    <p>Black Polyester</p>
+    <a href="{% url 'Mfashion' %}">
+    <p><button>View</button></p>
+  </a></div>
+  <div class="card" style="background-color:white;">
+    <img src="{% static 'images\18.jpg' %}" alt="HP Laptop" style="width:100%">
+    <h2>Zeffit Blue Cotton Blend</h2>
+    <p class="price">Rs 999</p>
+    <p>Trackpants - (Black)</p>
+    <a href="{% url 'Mfashion' %}">
+    <p><button>View</button></p>
+  </a></div>
+</div>
+<br><br>
+
+<div class="row">
+  <div class="card" style="background-color:white;" >
+    <img src="{% static 'images\19.jpg' %}" alt="HP Laptop" style="width:100%">
+    <h2>Veirdo 100% Cotton Black Printed  </h2>
+    <p class="price">Rs 1,899</p>
+    <p>Polo Shirt -M (Black)</p>
+   <a href="{% url 'Mfashion' %}">
+    <p><button>View</button></p>
+  </a></div>
+<img src="{% static 'images\29.png' %}" alt="HP Laptop" style="width:100%">
+{% endblock %}

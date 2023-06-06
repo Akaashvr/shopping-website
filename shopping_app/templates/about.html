@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}About Page{% endblock %}
+{% block content %}
+  <link rel="stylesheet" href="{% static 'styles/about.css' %}">
+
+  
+    <div class="about-section">
+    <h1>About Us</h1>
+    <p>Who we are and what we do.</p>
+  </div>
+
+  <h2 style="text-align:center">Our Team</h2>
+    <div class="column">
+      <div class="card">
+        <div class="container">
+          <h2>Akaash.V.R</h2>
+          <p class="title">Student</p>
+          <p>akaashvextc119@gst.sies.edu.in</p>
+          <p><button>Contact</button></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="column">
+      <div class="card">
+        <div class="container">
+          <h2>Darshan Sonawane</h2>
+          <p class="title">Student</p>
+          <p>darshansextc119@gst.sies.edu.in</p>
+          <p><button>Contact</button></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="column">
+      <div class="card">
+        <div class="container">
+          <h2>Shubham Bhandari</h2>
+          <p class="title">Student</p>
+          <p>parasbhandariextc119@gst.sies.edu.in</p>
+          <p><button>Contact</button></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <button class="btn"><a href="{% url 'main' %}">HOME</button>
+
+{% endblock %}

@@ -1,0 +1,219 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Home Page{% endblock %}
+{% block content %}
+
+<link rel="stylesheet" href="{% static 'styles/electcss.css' %}">
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark justify-content-center">
+  <!-- Links -->
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a class="nav-link">Limited Stocks remaining. Shop Now -->
+    </a>
+    </li>
+</nav>
+
+<section class="colored-section" id="title">
+<nav class="navbar2 navbar-expand-sm navbar-dark">
+  <!-- Links -->
+  <ul class="navbar-nav2">
+      <a class="navbar-brand" href="{% url 'main' %}">
+         <img src="{% static 'images/logo.gif' %}" width="70" height="70" alt="">
+      Shoppee
+    </a>
+    
+    <a class = "nav-cat" href="{% url 'Mfashion' %}"> MENS </a>&emsp;&emsp;
+    <a class = "nav-cat" href="{% url 'Wfashion' %}"> WOMENS </a>&emsp;&emsp;
+    <a class = "nav-cat" href="{% url 'beauty' %}"> BEAUTY </a>
+    </ul>
+  </section>
+</nav>
+
+<section class="white-section" id="features">
+
+  <div class="container-fluid">
+        <div class="row">
+            <h3 class="feature-title">Electronics</h3>
+            <p style="font-family:MS Reference Sans Serif;">
+              &emsp;&emsp;&ensp;<a href="{% url 'main' %}"><button class="button button1">Home</button></a> > Electronics</p>
+      </a>
+    </section>
+</div>
+
+<br>
+<div class="header" style="background-color:orange; font-family:Bebas Neue Regular;">
+  <h1>Laptops Section</h1>
+</div>
+
+<div class="row">
+  <div class="card" style="background-color:white;" >
+      <img src="{% static 'images\1.png' %}" alt="HP Laptop" style="width:100%">
+    <h2>HP Pavilion 14</h2>
+    <p class="price">Rs 54,480</p>
+    <p>Ryzen 5- 8GB/512GB SSD 14-inch Laptop</p>
+   <a href="{% url 'hplap' %}">
+    <p><button>View</button></p>
+  </a></div>
+  <div class="card" style="background-color:white;">
+    <img src="{% static 'images\20.jpg' %}" alt="HP Laptop" style="width:100%">
+    <h2>Lenovo IdeaPad Slim 5</h2>
+    <p class="price">Rs 62,999</p>
+    <p>11th Gen Intel Core i5 14</p>
+    <a href="{% url 'electronics' %}">
+    <p><button>View</button></p>
+  </a>
+  </div>
+  <div class="card" style="background-color:white;">
+    <img src="{% static 'images\21.jpg' %}" alt="HP Laptop" style="width:100%">
+    <h2>Dell 15 (2021)</h2>
+    <p class="price">Rs 46,999</p>
+    <p>AMD Ryzen 5-3450U Laptop, 8GB DDR4, 256GB SSD</p>
+    <a href="{% url 'electronics' %}">
+    <p><button>View</button></p>
+  </a>
+  </div>
+  <div class="card" style="background-color:white;">
+    <img src="{% static 'images\22.jpg' %}" alt="HP Laptop" style="width:100%">
+    <h2>ASUS TUF Gaming F15</h2>
+    <p class="price">Rs 63,499</p>
+    <p>Intel Core i5-10300H 10th Gen</p>
+    <a href="{% url 'electronics' %}">
+    <p><button>View</button></p>
+  </a>
+  </div>
+</div>
+<br><br>
+
+<div class= "box">
+<div class="header" style="background-color:orange; font-family:Bebas Neue Regular;">
+  <h1>T.V Section</h1>
+</div>
+
+<div class="row">
+  <div class="card" style="background-color:white;" >
+    <img src="{% static 'images\4.jpg' %}" alt="HP Laptop" style="width:100%">
+    <h2>SAMSUNG Crystal 4K 55-inch </h2>
+    <p class="price">Rs 51,999</p>
+    <p>Ultra HD (4K) LED Smart TV e</p>
+    <a href="{% url 'electronics' %}">
+    <p><button>View</button></p>
+  </a>
+  </div>
+  <div class="card" style="background-color:white;">
+    <img src="{% static 'images\23.jpg' %}" alt="HP Laptop" style="width:100%">
+    <h2>Sony Bravia 139 cm (55 inches) 4K Ultra </h2>
+    <p class="price">Rs 62,999</p>
+    <p>Smart LED Google TV KD-55X80J (Black)</p>
+    <a href="{% url 'electronics' %}">
+    <p><button>View</button></p>
+  </a>
+  </div>
+  <div class="card" style="background-color:white;">
+    <img src="{% static 'images\24.jpg' %}" alt="HP Laptop" style="width:100%">
+    <h2>Redmi 164 cm (65 inches) 4K Ultra HD</h2>
+    <p class="price">Rs 59,999</p>
+    <p>Android Smart LED TV X65</p>
+    <a href="{% url 'electronics' %}">
+    <p><button>View</button></p>
+  </a>
+  </div>
+  <div class="card" style="background-color:white;">
+    <img src="{% static 'images\25.jpg' %}" alt="HP Laptop" style="width:100%">
+    <h2>OnePlus 163.8 cm (65 inches) U Series 4K LED</h2>
+    <p class="price">Rs 66,699</p>
+    <p>Smart Android TV 65U1S (Black) </p>
+    <a href="{% url 'electronics' %}">
+    <p><button>View</button></p>
+  </a>
+  </div>
+</div>
+<br><br>
+
+<div class= "box">
+<div class="header" style="background-color:orange; font-family:Bebas Neue Regular;">
+  <h1>Refrigretors Section</h1>
+</div>
+
+<div class="row">
+  <div class="card" style="background-color:white;" >
+    <img src="{% static 'images\3.jpg' %}" alt="HP Laptop" style="width:100%">
+    <h2>MarQ 563 L Frost Free</h2>
+    <p class="price">Rs 55,999</p>
+    <p>(Side by Side, Gentle Silver Steel)</p>
+    <a href="{% url 'electronics' %}">
+    <p><button>View</button></p>
+  </a></div>
+  <div class="card" style="background-color:white;">
+    <img src="{% static 'images\26.jpg' %}" alt="HP Laptop" style="width:110%">
+    <h2>Lifelong 460 L Frost Free</h2>
+    <p class="price">Rs 39,990</p>
+    <p>(Side by Side, Silver)</p>
+    <a href="{% url 'electronics' %}">
+    <p><button>View</button></p>
+  </a></div>
+  <div class="card" style="background-color:white;">
+   <img src="{% static 'images\27.png' %}" alt="HP Laptop" style="width:100%">
+    <h2>Lloyd 200 L Direct Cool</h2>
+    <p class="price">Rs 36,999</p>
+    <p>(Base Drawer Begonia Blue)</p>
+    <a href="{% url 'electronics' %}">
+    <p><button>View</button></p>
+  </a></div>
+  <div class="card" style="background-color:white;">
+    <img src="{% static 'images\28.jpg' %}" alt="HP Laptop" style="width:100%">
+    <h2>Whirlpool 190 L Direct Cool</h2>
+    <p class="price">Rs 45,999</p>
+    <p>(Star Refrigerator Sapphire Fiesta)</p>
+    <a href="{% url 'electronics' %}">
+    <p><button>View</button></p>
+  </a></div>
+</div>
+<br><br>
+
+<div class= "box">
+<div class="header" style="background-color:orange; font-family:Bebas Neue Regular;">
+  <h1>Smartphones Section</h1>
+</div>
+
+<div class="row">
+  <div class="card" style="background-color:white;" >
+   <img src="{% static 'images\2.jpg' %}" alt="HP Laptop" style="width:100%">
+    <h2>One Plus Nord CE</h2>
+    <p class="price">Rs 29,999</p>
+    <p>(Blue Void, 8GB RAM, 128GB Storage)</p>
+    <a href="{% url 'oneplus' %}">
+    <p><button>View</button></p>
+  </a></div>
+  <div class="card" style="background-color:white;">
+    <img src="{% static 'images\30.jpg' %}" alt="HP Laptop" style="width:100%">
+    <h2>Samsung Galaxy S10 lite</h2>
+    <p class="price">Rs 29,999</p>
+    <p>(Prism Blue, 8GB RAM, 128GB Storage)</p>
+    <a href="{% url 'electronics' %}">
+    <p><button>View</button></p>
+  </a></div>
+  <div class="card" style="background-color:white;">
+   <img src="{% static 'images\31.jpg' %}" alt="HP Laptop" style="width:100%">
+    <h2>Oppo F17 pro</h2>
+    <p class="price">Rs 24,999</p>
+    <p>(Dynamic Red, 8GB RAM, 128GB Storage)</p>
+    <a href="{% url 'electronics' %}">
+    <p><button>View</button></p>
+  </a></div>
+  <div class="card" style="background-color:white;">
+    <img src="{% static 'images\32.jpg' %}" alt="HP Laptop" style="width:100%">
+    <h2>Xiaomi Redmi 10 Prime</h2>
+    <p class="price">Rs 14,999</p>
+    <p>(Phantom White, 6GB RAM, 128GB Storage)</p>
+    <a href="{% url 'electronics' %}">
+    <p><button>View</button></p>
+  </a></div>
+</div>
+<br><br>
+<img src="{% static 'images\29.png' %}" alt="HP Laptop" style="width:100%">
+
+
+{% endblock %}
+
+

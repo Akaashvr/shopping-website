@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Product Page{% endblock %}
+{% block content %}
+  <link rel="stylesheet" href="{% static 'styles\hplap.css' %}">
+
+
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark justify-content-center">
+    <!-- Links -->
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="">Limited Stocks remaining. Shop Now -->
+      </a>
+      </li>
+  </nav>
+
+  <section class="colored-section" id="title">
+  <nav class="navbar2 navbar-expand-sm navbar-dark">
+    <!-- Links -->
+    <ul class="navbar-nav2">
+        <a class="navbar-brand" href="{% url 'main' %}">
+           <img src="{% static 'images\logo.gif' %}" width="70" height="70" alt="">
+        Shoppee
+      </a>
+      </ul>
+    </section>
+  </nav>
+  <div class="yeah">
+        <p class="yeah2">Home > Electronics > HP Pavilion 14</p>
+  </div>
+
+<img src="{% static 'images/1.png' %}">
+<div class="title">
+  <h1> HP Pavilion 14 </h1>
+  <h4 style="font-family:MS Reference Sans Serif; color:grey";>Colour - Natural Silver</h4>
+  ____________________________________________________________________________<br>
+  <section class="title-ref">
+  <p><li>Windows 11 Home</li></p>
+  <p><li>Ryzen 5 - 5500U Processor</li></p>
+  <p><li>14 inch' ( 35.56 cm) FHD IPS, micro-edge, anti-glare Display</li></p>
+  <p><li>8 GB RAM, 512 GB SSD</li></p>
+  <p><li>Up to 4.0 GHz max boost clock</li></p>
+  <p><li>AMD Radeon™ Graphics</li></p>
+  <p><li>Audio by B&O</li></p>
+  <p><li>Dual speakers</li></p>
+  <p><li>1 Year Manufacturer Warranty</li></p>
+  </section>
+  ____________________________________________________________________________<br>
+</div>
+<div class ="price">
+<h1> Price - 54,480₹ </h1>
+<a href =""><p class="price-btn"><button>Add to Cart</button></p>
+</div>
+<img src="{% static 'images\29.png' %}" width="100%">
+<img src="{% static 'images\b1.png' %}" width="100%">
+<img src="{% static 'images\b2.png' %}" width="100%">
+
+{% endblock %}

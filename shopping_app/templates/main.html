@@ -1,0 +1,238 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Home Page{% endblock %}
+{% block content %}
+
+<section class="colored-section" id="title">
+
+    <div class="container-fluid">
+
+    <!-- Nav Bar -->
+      <nav class="navbar navbar-expand-sm navbar-dark">
+        <a class="navbar-brand" href="">
+           <img src="{% static 'images/logo.gif' %}" width="70" height="70" alt="">
+        Shoppee
+        </a>
+        <ul class="navbar-nav ml-auto">
+          <li class="dropdown" style="float:right"><a href="{% url 'about' %}" class="dropbtn">
+            &emsp;&emsp;About Us</a>&emsp;&emsp;
+          </li>
+          <li class="nav-item">
+            <li class="dropdown" style="float:right"><a href="javascript:void(0)" class="dropbtn">
+              &emsp;&emsp;&emsp;Categories&emsp;&emsp;&emsp;</a>
+              <div class="dropdown-content">
+		  {% if user.is_authenticated %}
+                  	<a href="{% url 'electronics' %}">Electronics</a>
+                  	<a href="{% url 'Mfashion' %}">Men's Fashion</a>
+                  	<a href="{% url 'Wfashion' %}">Womens's Fashion</a>
+                  	<a href="{% url 'beauty' %}">Beauty</a>
+		  {% else %}
+			<a href = "{% url 'main' %}">
+		  {% endif %}
+          </li>
+          {% if user.is_authenticated %}
+			<a href="{% url 'ulogout' %}"button class="button button1">Log Out</button></a>
+          {% else %}
+          	<a href="{% url 'usignup' %}" button class="button button1">Sign Up</button></a>
+          	<a href="{% url 'ulogin' %}" button class="button button1">Sign In</button></a>
+	  {% endif %}
+          <button class="button button1">My Cart <img src="{% static 'images/cart.png' %}" width=30px></button>
+
+         </div>
+      </nav></section>
+      <div class="slideshow-container">
+<div class="mySlides fade">
+        <div class="numbertext">1 / 3</div>
+        <img src = "{% static 'images/electronicstemplate(4).jpg' %}" style="width:100%">
+
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">2 / 3</div>
+        <img src = "{% static 'images/electronicstemplate(2).jpg' %}" style="width:100%">
+
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">3 / 3</div>
+        <img src= "{% static 'images/electronicstemplate(3).jpg' %}" style="width:100%">
+
+      </div>
+
+      </div>
+      <br>
+
+      <div style="text-align:center">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+
+      <script>
+      var slideIndex = 0;
+      showSlides();
+
+      function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {slideIndex = 1}
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+        setTimeout(showSlides, 2000); // Change image every 2 seconds
+      }
+      </script>
+
+      <img src="{% static 'images/template.gif' %}"
+        width="100%">
+        <div class= "box">
+        <div class="header" style="background-color:orange; font-family:Bebas Neue Regular;">
+          <h2>Top Offers On Electronics</h2>
+        </div>
+
+         <div class="row">
+          <div class="card" style="background-color:white;" >
+
+            <img src="{% static 'images/1.png' %}" alt="HP Laptop" style="width:100%">
+            <h2>HP Pavilion 14</h2>
+            <p class="price">Rs 54,480</p>
+            <p>(Ryzen 5- 8GB/512GB SSD 14-inch Laptop)</p>
+            <a href = "{% url 'hplap' %}">
+            <p><button>View</button></p>
+          </a></div>
+          <div class="card" style="background-color:white;">
+            <img src="{% static 'images/2.jpg' %}" alt="One plus phone" style="width:100%">
+            <h2>OnePlus Nord CE 5G </h2>
+            <p class="price">Rs 24,999</p>
+            <p>(Blue Void, 8GB RAM, 128GB Storage)</p>
+            <a href="{% url 'oneplus' %}">
+            <p><button>View</button></p>
+          </a></div>
+          <div class="card" style="background-color:white;">
+            <img src="{% static 'images/3.jpg' %}" alt="Samsung fridge" style="width:100%">
+            <h2>SAMSUNG 657 L Frost Free</h2>
+            <p class="price">Rs 155,999</p>
+            <p>(Side by Side, Gentle Black Matt)</p>
+            <a href = "{% url 'electronics' %}">
+            <p><button>View</button></p>
+          </a></div>
+          <div class="card" style="background-color:white;">
+            <img src="{% static 'images/4.jpg' %}" alt="Samsung TV" style="width:100%">
+            <h2>SAMSUNG Crystal 4K 55-inch </h2>
+            <p class="price">Rs 51,999</p>
+            <p>Ultra HD (4K) LED Smart TV e</p>
+            <a href = "{% url 'electronics' %}">
+            <p><button>View</button></p>
+          </a></div>
+        </div>
+      <br><br>
+
+    <img class="image-image  image-hand" src="https://assets.myntassets.com/w_980,c_limit,fl_progressive,dpr_2.0/assets/images/2021/12/29/6958a737-927d-4d02-be92-0438604f2b8e1640772041995-Casual-Wear_Desk.jpg" srcset="" width=80% height=300px>
+
+    <div class= "box">
+    <div class="header" style="background-color:orange;  font-family:Bebas Neue Regular;">
+      <h2>Top Offers On Clothing </h2>
+    </div>
+
+    <div class="row">
+      <div class="card" style="background-color:white;" >
+        <img src="{% static 'images/5.jpg' %}" alt="mini dress" style="width:100%">
+        <h2>Burgundy Turtleneck Mini Dress </h2>
+        <p class="price">Rs 3,499</p>
+        <p>Long Sleeve - (Grey) </p>
+        <a href = "{% url 'Wfashion' %}">
+        <p><button>View</button></p>
+      </a></div>
+      <div class="card" style="background-color:white;">
+        <img src="{% static 'images/6.jpg' %}" alt="Lehenga" style="width:100%">
+        <h2>Falguni Shane Peacock Lehenga</h2>
+        <p class="price">Rs 58,999</p>
+        <p>Intricate Embroidery -(Pink)</p>
+        <a href = "{% url 'Wfashion' %}">
+        <p><button>View</button></p>
+      </a></div>
+      <div class="card" style="background-color:white;">
+        <img src="{% static 'images/7.jpg' %}" alt="T-shirt" style="width:100%">
+        <h2>Prowl Men's Printed T-Shirt</h2>
+        <p class="price">Rs 1,199</p>
+        <p>Slim Fit - M - (Grey)</p>
+        <a href = "{% url 'Mfashion' %}">
+        <p><button>View</button></p>
+      </a></div>
+      <div class="card" style="background-color:white;">
+        <img src="{% static 'images/8.jpg' %}" alt="Hoodie" style="width:100%">
+        <h2>Proline Men's Printed Hoodie </h2>
+        <p class="price">Rs 1,499</p>
+        <p>Slim Fit - M - (Green-Black)</p>
+        <a href = "{% url 'Mfashion' %}">
+        <p><button>View</button></p>
+      </a></div>
+    </div>
+  <br><br>
+  <div class= "box">
+  <div class="header" style="background-color:orange;  font-family:Bebas Neue Regular;">
+    <h2>Top Offers On Beauty </h2>
+      </div>
+      <div class="row">
+        <div class="card" style="background-color:white;" >
+          <img src="{% static 'images/9.jpg' %}" alt="Lipstick" style="width:100%">
+          <h2>COLORS Lip Gloss & Lipstick</h2>
+          <p class="price">Rs 199</p>
+          <p>2 in 1 Matte - Mehroon shade</p>
+          <a href = "{% url 'beauty' %}">
+          <p><button>View</button></p>
+        </a></div>
+        <div class="card" style="background-color:white;">
+          <img src="{% static 'images/10.jpg' %}" alt="Eyeliner" style="width:100%">
+          <h2>RC RAMBLE Liquid Eyeliner</h2>
+          <p class="price">Rs 129</p>
+          <p>Pack of 29ml - (Black)</p>
+          <a href = "{% url 'beauty' %}">
+          <p><button>View</button></p>
+        </a></div>
+        <div class="card" style="background-color:white;">
+          <img src="{% static 'images/11.jpg' %}" alt="Foundation" style="width:100%">
+          <h2>Colors Queen Cream Foundation </h2>
+          <p class="price">Rs 189</p>
+          <p>White Ivory Fair SPF 15 60 g</p>
+          <a href = "{% url 'beauty' %}">
+          <p><button>View</button></p>
+        </a></div>
+        <div class="card" style="background-color:white;">
+          <img src="{% static 'images/12.jpg' %}" alt="Glittering" style="width:100%">
+          <h2>Colors Queen Glittering Palette</h2>
+          <p class="price">Rs 269</p>
+          <p>Eye Shadow Cream-to-powder 18g</p>
+          <a href = "{% url 'beauty' %}">
+          <p><button>View</button></p>
+        </a></div>
+      </div>
+    <br><br>
+
+  </div>
+</div>
+</div>
+<img src="{% static 'images/b1.png' %}" style="width:100%">
+<!-- Call to Action -->
+<nav class="navbar navbar-expand-lg navbar-dark">
+<section class="bottom-section" id="cta">
+
+  <div class="container-fluid">
+
+    <h3 class="big-heading">
+Download Shoppee App Now. Fast, Simple & Delightful. All it takes is 30 seconds to Download.</h3>
+    <button class="download-button btn btn-lg btn-dark" type="button"><i class="fab fa-apple"></i> Download</button>
+    <button class="download-button btn btn-lg brn-light" type="button"><i class="fab fa-google-play"></i> Download</button>
+  </div>
+</section>
+</nav>
+<img src="{% static 'images\b2.png' %}" style="width:100%">
+
+{% endblock %}

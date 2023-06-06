@@ -1,0 +1,130 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Women Fashion Page{% endblock %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'styles/womencss.css' %}">
+
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark justify-content-center">
+  <!-- Links -->
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a class="nav-link">Limited Stocks remaining. Shop Now</a>
+    </li>
+</nav>
+
+<section class="colored-section" id="title">
+<nav class="navbar2 navbar-expand-sm navbar-dark">
+  <!-- Links -->
+  <ul class="navbar-nav2">
+      <a class="navbar-brand" href="{% url 'main' %}">
+         <img src="{% static 'images\logo.gif' %}" width="70" height="70" alt="">
+      Shoppee
+    </a>
+    <a class = "nav-cat" href="{% url 'electronics' %}"> ELECTRONICS </a>&emsp;&emsp;
+    <a class = "nav-cat" href="{% url 'Mfashion' %}"> MENS </a>&emsp;&emsp;
+    <a class = "nav-cat" href="{% url 'beauty' %}"> BEAUTY </a>
+    </ul>
+  </section>
+</nav>
+
+<section class="white-section" id="features">
+
+  <div class="container-fluid">
+        <div class="row">
+            <h3 class="feature-title">Womens</h3>
+            <p style="font-family:MS Reference Sans Serif;">
+              &emsp;<a href="{% url 'main' %}"><button class="button button1">Home</button></a> > Womens</p>
+      </a>
+    </section>
+</div>
+
+<br>
+<div class="header" style="background-color:orange; font-family:Bebas Neue Regular;">
+  <h2>Showing 9 results</h2>
+</div>
+
+<div class="row">
+  <div class="card" style="background-color:white;" >
+    <img src="{% static 'images\5.jpg' %}" alt="HP Laptop" style="width:100%">
+    <h2>Burgundy Turtleneck Mini Dress </h2>
+    <p class="price">Rs 3,499</p>
+    <p>Long Sleeve - (Grey) </p>
+    <a href="{% url 'Wfashion' %}">
+    <p><button>View</button></p>
+  </a></div>
+  <div class="card" style="background-color:white;">
+   <img src="{% static 'images\6.jpg' %}" alt="HP Laptop" style="width:100%">
+    <h2>Falguni Shane Peacock Lehenga</h2>
+    <p class="price">Rs 58,999</p>
+    <p>Intricate Embroidery -(Pink)</p>
+    <a href="{% url 'Wfashion' %}">
+    <p><button>View</button></p>
+  </a></div>
+  <div class="card" style="background-color:white;">
+    <img src="{% static 'images\33.jpg' %}" alt="HP Laptop" style="width:100%">
+    <h2>Urbane Modern Women </h2>
+    <p class="price">Rs 2,499</p>
+    <p>Tops and Tunics - (Grey) </p>
+    <a href="{% url 'Wfashion' %}">
+    <p><button>View</button></p>
+  </a></div>
+  <div class="card" style="background-color:white;">
+    <img src="{% static 'images\34.jpg' %}" alt="HP Laptop" style="width:100%">
+    <h2>Classy Graceful Women </h2>
+    <p class="price">Rs 3,699</p>
+    <p>Ensemble suit - (Black) </p>
+   <a href="{% url 'Wfashion' %}">
+    <p><button>View</button></p>
+  </a></div>
+</div>
+<br><br>
+
+<div class="row">
+  <div class="card" style="background-color:white;" >
+    <img src="{% static 'images\35.jpg' %}" alt="HP Laptop" style="width:100%">
+    <h2>Pretty Fabulous Tops </h2>
+    <p class="price">Rs 2,299</p>
+    <p>Tube tops - (Black) </p>
+   <a href="{% url 'Wfashion' %}">
+    <p><button>View</button></p>
+  </a></div>
+  <div class="card" style="background-color:white;">
+    <img src="{% static 'images\36.jpg' %}" alt="HP Laptop" style="width:100%">
+    <h2>Classic Fashionable Jumpsuit </h2>
+    <p class="price">Rs 3,499</p>
+    <p>Women Jumpsuit - (Black) </p>
+   <a href="{% url 'Wfashion' %}">
+    <p><button>View</button></p>
+  </a></div>
+  <div class="card" style="background-color:white;">
+    <img src="{% static 'images\37.jpg' %}" alt="HP Laptop" style="width:100%">
+    <h2>Bufzone Women Solid  </h2>
+    <p class="price">Rs 3,499</p>
+    <p>One Sleeve crop - (Black) </p>
+    <a href="{% url 'Wfashion' %}">
+    <p><button>View</button></p>
+  </a></div>
+  <div class="card" style="background-color:white;">
+    <img src="{% static 'images\38.jpg' %}" alt="HP Laptop" style="width:100%">
+    <h2>Texco Crepe Regular </h2>
+    <p class="price">Rs 3,499</p>
+    <p>Women Tops - (Red) </p>
+    <a href="{% url 'Wfashion' %}">
+    <p><button>View</button></p>
+  </a>  </div>
+</div>
+<br><br>
+
+<div class="row">
+  <div class="card" style="background-color:white;" >
+    <img src="{% static 'images\42.jpg' %}" alt="HP Laptop" style="width:100%">
+    <h2>THE BLAZZE Cotton Crop Tops</h2>
+    <p class="price">Rs 3,499</p>
+    <p>Women Crop Tops - (Black) </p>
+   <a href="{% url 'Wfashion' %}">
+    <p><button>View</button></p>
+  </a></div>
+<img src="{% static 'images\29.png' %}" alt="HP Laptop" style="width:100%">
+
+{% endblock %}

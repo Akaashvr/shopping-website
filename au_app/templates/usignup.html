@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block title %} Sign Up Page {% endblock %}
+{% block content %}
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'styles/signup.css' %}">
+
+<form method = "POST">
+{% csrf_token %}
+  <div class="popup">
+    <div class="form">
+      <h2>Sign UP </h2>
+      <div class="form-element">
+        <label for="Username">Username </label>
+        <input type="text" name="un" placeholder="Enter Username">
+      </div>
+      <div class="form-element">
+        <label for="Ph no:">Mobile No:</label>
+        <input type="number"  name="ph" placeholder="Enter Mobile No:">
+      </div>
+      <div class="form-element">
+        <button>Sign UP</button>
+      </div>
+    </div>
+
+
+</form>
+	{{ msg }}
+{% endblock %}
